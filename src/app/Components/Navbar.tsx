@@ -61,7 +61,7 @@ export default function Navbar() {
 
             {/* Second Nav: Full-screen menu, animated */}
             <nav className={`w-full h-screen absolute top-0 left-0 bg-black z-50 transition-transform duration-500 ease-in-out ${menu ? 'translate-y-0' : '-translate-y-full'}`}>
-                <div className="w-full flex justify-between items-center px-5 py-3 text-white">
+                <div className="w-full flex justify-between items-center px-5 py-3 bg-black text-white">
                     <a className="text-xs font-[700]" href="/">
                         THE ART CONCIERGE <br />
                         <span className="text-xs font-[500]">ATHENS - PARIS</span>
@@ -76,7 +76,7 @@ export default function Navbar() {
                 <div ref={menuContainerRef} className="Menu container">
                     <ul className="flex flex-col justify-center items-start gap-3 text-4xl font-[300] text-white">
                         {['Home', 'About Us', 'Artist', 'The Gallery', 'Contact'].map((item, index) => (
-                            <li key={item} ref={el => menuItemsRef.current[index] = el}>
+                            <li key={item} ref={(el) => { menuItemsRef.current[index] = el; }}>
                                 <a href="/" className="Hover left">{item}</a>
                             </li>
                         ))}

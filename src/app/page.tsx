@@ -1,5 +1,5 @@
 import Header from "./Components/Header";
-// import Loader from "./Components/Loader";
+import Loader from "./Components/Loader";
 import Navbar from "./Components/Navbar";
 import Section1 from "./Components/Section1";
 import Section2 from "./Components/Section2";
@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <>
-        {/* <Loader/> */}
+        <Loader/>
         <Navbar/>
         <Header/>
         <Section1/>
